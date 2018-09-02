@@ -26,5 +26,7 @@ Oh and they often have a pengiun friend that shows up. He never talks but will l
 
 ## Updates ##
 
+### 1 Sep, 2018 ###
+- Added JSON data to repo for website build.
 ### 28 Aug, 2018 ###
 - contextual data was added to the readme.md file since it was blank. 

@@ -1,7 +1,8 @@
 {
   "guardians": [
     {
-      "id": "Titan",
+      "id" : 1,
+      "title": "Titan",
       "image": "https://kodingklosty.github.io/klostermeyerjames_DVP3/Titan Smash.jpg",
       "description": "Titan is the tank of the group. Reminds me of the Hulk! Titan SMASH!",
       "primary": "Antiope - D",
@@ -9,7 +10,8 @@
       "power": "Sins of the Past"
     },
     {
-      "id": "Hunter",
+      "id": 2,
+      "title": "Hunter"
       "image": "https://kodingklosty.github.io/klostermeyerjames_DVP3/CaydeHunter.jpg",
       "description": "Hunter is the ranged attack of the group. Scout Rifles are best with the guy. ",
       "primary": "Jade Rabbit",
@@ -17,7 +19,8 @@
       "power": "D.A.R.C.I"
     },
     {
-      "id": "Warlock",
+      "id": 3,
+      "title": "Warlock"
       "image": "https://kodingklosty.github.io/klostermeyerjames_DVP3/Warlock.jpg",
       "description": "The AOE damage of the group. Watch out for that Nova Bomb",
       "primary": "Vigilance Wing",

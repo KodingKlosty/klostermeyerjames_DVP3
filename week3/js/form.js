@@ -24,16 +24,6 @@ document.getElementsByName('message')[0].placeholder='Trouble Ticket Information
 var bttn = document.querySelector('[type=submit]');
 bttn.setAttribute('class', 'disabled');
 
-let nme = document.getElementById('name');
-let eml = document.getElementById('email');
-let phn = document.getElementById('phone');
-let mss = document.getElementById('message');
-
-nme.addEventListener('change',validateForm);
-eml.addEventListener('change',validateForm);
-phn.addEventListener('change',validateForm);
-mss.addEventListener('change',validateForm);
-
 function validateForm(event)
 {
 event.preventDefault();
@@ -55,8 +45,51 @@ var value = true;
     }
 }
 
+function inputReq(event)
+{
+    var target = event.target;
+    var parent = target.parentElement;
+    var error = '<label class="error">This is requried!</label>'
 
+    if(!target.value.length)
+    {
+        if(!parent.querySelector('.error'))
+        {
+            parent.insertAdjacentHTML('beforeend', error);
+        }
+    }
+    else
+    {
+        parent.removeChild(parent.querySelector('.error'));
+    }  
+}
 
+var requiredFields = document.querySelectorAll('.required')
+for(var i = 0; i<requiredFields.length; i++)
+{
+    requiredFields[i].addEventListener('input',validateForm);
+    requiredFields[i].addEventListener('blur', inputReq);
+}
+
+//=================================
+//Form submit
+//=================================
+
+function sendData(event)
+{
+    event.preventDefault();
+
+    var message = '<h2>Thank You!</h2><p>Guardian your data has been sent to the techincal team</p>'
+    var target = event.target;
+    var disabled = target.classList.contains('disabled')
+
+    if(disabled === false)
+    {
+        document.querySelector('body').innerHTML = message;
+    }
+}
+
+bttn.addEventListener('click', sendData);
 
 
 

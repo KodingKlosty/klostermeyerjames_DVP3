@@ -1,0 +1,1 @@
+document.querySelector("h2").innerHTML = "<h2><strong>Destiny 2</strong> Contact Form</h2>";

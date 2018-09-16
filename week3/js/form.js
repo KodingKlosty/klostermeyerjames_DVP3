@@ -9,5 +9,12 @@ var firstP = "We are sorry you are having issues guardian. Please enter you infr
 var getfirst = document.querySelector("p");
 getfirst.textContent = firstP;
 
+// **** Update form info
+// Update Name
+document.getElementsByName('name')[0].placeholder='Guardian Name';
+// Update Phone to Gamertag
+document.getElementsByName('phone')[0].placeholder='Gamertag';
+// Update Message to Trouble Ticket Infomation
+document.getElementsByName('message')[0].placeholder='Trouble Ticket Information'
 
 

@@ -6,9 +6,14 @@ This code was taken from the Bungie API community. The referanced website is fou
 http://destinydevs.github.io/BungieNetPlatform/docs/Getting-Started
 ===================================================== */
 
-var apiKey = "ed9eb60a012f45588c35e5028467e0c6";
+const apiKey = "ed9eb60a012f45588c35e5028467e0c6";
+const D2Manifest = "https//www.bungie.net/platform/Destiny2/Manifest/"
+const json = await Response.json();
 
-var xhr = new XMLHttpRequest();
+
+fetch(D2Manifest)
+console.log(json);
+/*var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://www.bungie.net/platform/Destiny2/Manifest/", true);
 xhr.setRequestHeader("X-API-Key", apiKey);
 
@@ -19,4 +24,4 @@ xhr.onreadystatechange = function(){
  }
 }
 
-xhr.send();
+xhr.send();*/

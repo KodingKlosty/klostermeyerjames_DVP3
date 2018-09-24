@@ -16,17 +16,21 @@
 	</head>
 	<body>
             <!-- Header for page -->
-            <h2>Destiny 2 <strong>Random Fireteam </strong>Generator</h2>
+            <h1>Destiny 2 <strong>Random Fireteam </strong>Generator</h1>
 
-            <article>
-                <input type="radio" id="strike" value="strike"/>
-                <label for="strike">Strike/Nightfall</label>
-            </article>
+            <form>
+                    <input type="radio" name ="ftType" value="strike" onchange="radioSelect()"/> Strike/Nightfall
+                    <input type="radio" name ="ftType" value="comp" onchange="radioSelect()"/> Competitive 
+                    <input type="radio" name ="ftType" value="crucible" onchange="radioSelect()"/> Crucible
+                    <input type="radio" name ="ftType" value="raid" onchange="radioSelect()"/> Raid
+            </form>
 
             <!--Gamer Data-->
-            <section id="gamerdata">
-                
+            <section>
+                <h2>Randomly Selected Gamers</h2>
+                <ul id="gamerInfo"></ul>
             </section>
+            <button onclick="clearList()">Erase Gamer Info</button>
         	<!-- Javascript -->
 		<script src="charData.js"></script>
     </body>
